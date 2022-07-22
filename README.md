@@ -4,5 +4,14 @@ A python module to extract the CPU time breakdown time and total wall time from 
 ### Basic usage
 
 ```python 
-your_code = do_some_stuff
+
+import numpy as np
+import matplotlib.pylab as plt
+import pandas as pd
+import logfileCPU as cputime
+
+
+process_time,wall_time = cputime.cpu_timebreakdown("path/to/logfile")
+process_time.head()
+
 ```
