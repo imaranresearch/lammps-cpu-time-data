@@ -1,7 +1,4 @@
 
-import numpy as np
-import pandas as pd
-
 def cpu_timebreakdown(str):
     data_frame = open(str,"r+")
     contents = data_frame.readlines()
@@ -21,8 +18,6 @@ def cpu_timebreakdown(str):
         if (line.startswith(cpu_use_string)):
             wall_time=wall_time+(float(line.split()[3]))
     cpu_use_percentage = pd.DataFrame([np.array(relative_time_percentage)],columns=np.array(algorithm))
-    #wall_time = wall_time_local
+
     return cpu_use_percentage,wall_time
 
-#if __name__ == "__main__":
-#    logfileCPU()
